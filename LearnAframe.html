@@ -1,6 +1,7 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <a-scene>
@@ -13,4 +14,9 @@
 	   </a-entity>
     </a-scene>
   </body>
+  <script>
+	$("#tree").on('error', ()=>{
+		alert("Load model error");
+	})
+  </script>
 </html>
