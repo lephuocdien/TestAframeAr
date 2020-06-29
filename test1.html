@@ -45,7 +45,7 @@
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 	  
 	  <a-assets>
-			<a-asset-item id="tree" src="./models/scene.gltf"></a-asset-item>
+			<a-asset-item id="tree" src="./models/earth.gltf"></a-asset-item>
 	</a-assets>
       <!-- a-nft is the anchor that defines an Image Tracking entity -->
       <!-- on 'url' use the path to the Image Descriptors created before. -->
@@ -60,13 +60,13 @@
           <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
           <a-entity
           gltf-model="#tree"
-              scale="10 10 10"
+              scale="20 20 20"
               position="0 0 0"
           >
           </a-entity>
       </a-nft>
       <!-- static camera that moves according to the device movemenents -->
-      <a-entity id="rig" position="0 0 100" rotation="0 0 0">
+      <a-entity id="rig" position="0 0 20" rotation="0 0 0">
 	   <a-entity id="camera" camera look-controls></a-entity> 
 	   </a-entity>
     </a-scene>
