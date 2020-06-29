@@ -4,8 +4,16 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="0 0 -5"  color="#4CC3D9"></a-box>
-       <a-entity camera></a-entity>
+	
+    <!-- <a-entity id="box" geometry="primitive: box" material="color: red"rotation="-45 0 0"></a-entity>  -->
+	 <a-entity
+     gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+     position="0 0 0"
+	 
+	 >
+	 <a-entity id="rig" position="100 0 100" rotation="0 45 0">
+	   <a-entity id="camera" camera look-controls></a-entity>
+	   </a-entity>
     </a-scene>
   </body>
 </html>
