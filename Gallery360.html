@@ -21,7 +21,7 @@
               material="color: gray; opacity: 0.5"></a-entity> -->
         <a-sky id="image-360" radius="10" src="#city"></a-sky>
         <a-entity class="link" geometry="primitive: plane; height: 1; width: 1"
-            material="shader: flat; src: #cubes-thumb"></a-entity>
+            material="shader: flat; src: #cubes-thumb" sound="on: click; src: #click-sound"></a-entity>
         <a-camera>
             <a-cursor id="cursor"
                 animation__click="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; easing: easeInCubic; dur: 150; startEvents: click"
