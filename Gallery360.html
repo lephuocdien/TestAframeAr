@@ -5,26 +5,12 @@
 <body>
     <a-scene>
         <a-assets>
-            <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-
-            <!-- Images. -->
-            <img id="city" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
-            <img id="city-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
-            <img id="cubes" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
-            <img id="cubes-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
-            <img id="sechelt" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-            <img id="sechelt-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
-        </a-assets>
-
-      
-        <!-- Camera + Cursor. -->
-        <a-camera>
-            <a-cursor id="cursor"
-                animation__click="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; easing: easeInCubic; dur: 150; startEvents: click"
-                animation__clickreset="property: scale; to: 0.1 0.1 0.1; dur: 1; startEvents: animationcomplete__click"
-                animation__fusing="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; easing: easeInCubic; dur: 150; startEvents: fusing">
-            </a-cursor>
-        </a-camera>
+            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+          </a-assets>
+        
+          <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+        
+         
     </a-scene>
 </body>
 </head>
