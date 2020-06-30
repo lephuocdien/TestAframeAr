@@ -1,12 +1,14 @@
 <html>
-  <head>
+
+<head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <a-scene>
         <a-assets>
             <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-        
+
             <!-- Images. -->
             <img id="city" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
             <img id="city-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
@@ -14,10 +16,13 @@
             <img id="cubes-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
             <img id="sechelt" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
             <img id="sechelt-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
-          </a-assets>
-          <a-entity class="link" geometry="primitive: plane; height: 1; width: 1" position="1 1 -1"
-              material="color: gray; opacity: 0.5"></a-entity>
+        </a-assets>
+        <!-- <a-entity class="link" geometry="primitive: plane; height: 1; width: 1" position="1 1 -1"
+              material="color: gray; opacity: 0.5"></a-entity> -->
+        <a-entity class="link" geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: #cubes-thumb"></a-entity>
         <a-entity id="box" geometry="primitive: box" material="color: red" position="0 0 -5"></a-entity>
     </a-scene>
-  </body>
+</body>
+
 </html>
