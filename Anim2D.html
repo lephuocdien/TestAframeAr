@@ -7,10 +7,12 @@
                 to: {default: '2.5 2.5 2.5', type: 'vec3'}
               },          
               init: function () {
-                AddLogText("MouseEnter");
+               
                 var data = this.data;
                 var el = this.el;
-                this.el.addEventListener('mouseenter', function () {
+                this.el.addEventListener('mouseenter', function () 
+                {
+                    AddLogText("MouseEnter"); 
                   el.object3D.scale.copy(data.to);
                 });
               }
