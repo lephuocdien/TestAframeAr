@@ -23,16 +23,17 @@
         <!-- <a-sky id="image-360" radius="10" src="#city"></a-sky> -->
 
         <!-- Link template we will build. -->
-        <a-entity class="link" geometry="primitive: plane; height: 1; width: 1" color="red" position="0 0 -1" material="color: gray; opacity: 0.5"></a-entity>
+        <a-entity geometry="primitive: plane; height: 0.2; width: 0.2" position="0 0 -1"
+              material="color: gray; opacity: 0.5"></a-entity>
 
         <!-- Camera + Cursor. -->
-        <a-camera>
+        <!-- <a-camera>
             <a-cursor id="cursor"
                 animation__click="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; easing: easeInCubic; dur: 150; startEvents: click"
                 animation__clickreset="property: scale; to: 0.1 0.1 0.1; dur: 1; startEvents: animationcomplete__click"
                 animation__fusing="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; easing: easeInCubic; dur: 150; startEvents: fusing">
             </a-cursor>
-        </a-camera>
+        </a-camera> -->
     </a-scene>
 </body>
 
