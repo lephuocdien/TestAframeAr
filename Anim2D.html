@@ -6,14 +6,16 @@
               schema: {
                 to: {default: '2.5 2.5 2.5', type: 'vec3'}
               },          
-              init: function () {
+              init: function ()
+              {
                
                 var data = this.data;
                 var el = this.el;
                 this.el.addEventListener('mouseenter', function () 
                 {
                     AddLogText("MouseEnter"); 
-                  el.object3D.scale.copy(data.to);
+                    AddLogText(this.el);
+                    el.object3D.scale.copy(data.to);
                 });
               }
             });
