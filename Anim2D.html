@@ -1,33 +1,40 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title> 4444 My A-Frame Scene</title>
-		 <script src="libs/aframe-ar.js"></script>
-        <script src="libs/build.js"></script>
-		 
-		<script src="libs/aframe.min.js"></script>
-        <script src="libs/aframe-spritesheet-component.min.js"></script>    
-      </head>
-      
-      <body>
-         <a-scene>         
-          <a-image src="heo.png"
-                   sprite-sheet="cols:8; rows: 3; progress: 0;"
-                   position="0 0 -4"></a-image>         
-    
-        </a-scene>
-        <script type="text/javascript">
-            var animation = { progress: 0 };
-    
-            var tween = new TWEEN.Tween(animation)
-                .to({ progress: 1 }, 1000)
-                .onUpdate(function(){
-                    document.querySelector('a-image').setAttribute('sprite-sheet', 'progress', animation.progress);
-                });
-    
-    
-            tween.onComplete(function() { animation.progress = 0; });
-            tween.chain(tween);
-            tween.start();
-        </script>
-      </body>
+
+<head>
+	<title>A-Frame: Spritesheet Animation</title>
+	<meta name="description" content="A-Frame Examples">
+	 <script src="libs/aframe.min.js"></script>
+	<!-- <script src="js/aframe-environment-component.min.js"></script> -->
+	<script src="libs/aframe-spritesheet-animation.js"></script>
+</head>
+
+<body>
+
+<script>
+
+AFRAME.registerComponent('rotato', {
+
+	tick: function()
+	{
+		this.el.object3D.rotation.y -= 0.028049;	
+	}
+
+});
+
+</script>
+
+<a-scene environment="preset: default;">
+
+	<a-assets>
+		<img id="sheet" src="images/spritesheet-test.png"/>		
+	</a-assets>
+
+
+	<a-plane position="0 1 -30" height="20" width="20" material="shader: flat; src: #sheet; transparent: true; " spritesheet-animation="rows: 2; columns: 8; frameDuration: 0.08; loop: true;" >
+	</a-plane>
+
+</a-scene>
+
+</body>
 </html>
