@@ -17,6 +17,7 @@ AFRAME.registerComponent('spritesheet-animation', {
 
 	init: function()
 	{
+		console.log("Init function ");
 		this.repeatX = 1 / this.data.columns;
 		this.repeatY = 1 / this.data.rows;
 
@@ -28,13 +29,17 @@ AFRAME.registerComponent('spritesheet-animation', {
 		this.frameTimer = 0;
 		this.currentFrameIndex = this.data.firstFrameIndex;
 		this.animationFinished = false;
+		console.log("Init function fff");
 	},
 	
 	tick: function (time, timeDelta) 
 	{
 		// return if animation finished.
 		if (this.animationFinished)
+		{
+			console.log("animationFinished ----------------------------- ");
 			return;
+		}
 
 		this.frameTimer += timeDelta / 1000;
 
@@ -47,16 +52,18 @@ AFRAME.registerComponent('spritesheet-animation', {
 			{
 				if (this.data.loop)
 				{
+					console.log("11111111111111111111111111");
 					this.currentFrameIndex = this.data.firstFrameIndex;
 				}
 				else
 				{
+					console.log("In tick function  set value true animationFinished");
 					this.animationFinished = true;
 					return;
 				}
 			}
 		}
-
+		//console.log("In tick function  1111111");
 		let rowNumber = Math.floor(this.currentFrameIndex / this.data.columns);
 		let columnNumber = this.currentFrameIndex % this.data.columns;
 		
@@ -65,6 +72,7 @@ AFRAME.registerComponent('spritesheet-animation', {
 
 		if ( this.mesh.material.map )
 		{
+			//console.log("In tick function  222222");
 			this.mesh.material.map.repeat.set(this.repeatX, this.repeatY);
 			this.mesh.material.map.offset.set(offsetX, offsetY);
 		}
